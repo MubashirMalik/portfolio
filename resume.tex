@@ -1,0 +1,230 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{roboto}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{12pt} % Fixes the warning
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-0pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge Mubashir Ahmed Malik} \\ \vspace{1pt}
+    \small
+    +92 317-538-4929 $|$
+    \href{mailto:imubasherahmad@gmail.com}{imubasherahmad@gmail.com} $|$
+    \href{https://linkedin.com/in/mubashir0}{linkedin.com/in/mubashir0} $|$
+    \href{https://github.com/mubashirmalik}{github.com/mubashirmalik} $|$
+    G-11, Islamabad, PAK
+    \vspace{0pt} % Ensures vertical alignment
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National University of Computer \& Emerging Sciences (FAST)}{Islamabad, PAK}
+      {Bachelor of Science in Computer Science}{Aug 2018 -- Jun 2022}
+  \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+     \resumeSubheading
+      {Automation GOAT Corporation}{Oregon, USA (Remote)}
+      {Lead Contributor \& Mentor}{Aug 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Acted as primary client-facing engineer, leading requirement gathering, workflow analysis, and issue resolution – translating business needs into scalable solutions}
+        \resumeItem{Orchestrated the end-to-end delivery of 10+ web and mobile applications, guiding projects from initial roadmap design through MVP to full production rollout}
+        \resumeItem{Led technical direction for a team of 6 engineers, driving code quality improvements and reducing production issues – improving delivery consistency and timelines}
+      \resumeItemListEnd
+      \resumeSubSubheading
+        {Senior Full Stack Developer}{May 2025 -- Present}
+        \resumeItemListStart
+          \resumeItem{Architected and scaled a high-volume community solar platform generating millions in revenue and supporting 1,000+ active field agents}
+          \resumeItem{Engineered an interactive live-mapping feature to track lead pipelines and sales stages in real-time for field agents}
+          \resumeItem{Architected complex database schemas for commission payroll and insurance software, engineering hierarchical payout logic to accurately calculate and distribute multi-party revenue splits}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Nelly IS Marketing}{Atlanta, USA (Remote)}
+      {Full Stack Developer}{Sep 2024 -- Apr 2025}
+      \resumeItemListStart
+      \resumeItem{Led a 4-person cross-functional team through 8+ projects across various domains}
+      \resumeItem{Directed critical backend design decisions – from database schemas to API structures and technology stacks}
+      \resumeItem{Collaborated directly with clients and stakeholders to translate business needs into actionable technical requirements}
+      \resumeItem{Developed and maintained \textbf{Royalty Renewables}, a large-scale community solar brokerage management system}
+      % \resumeItem{Key features included agent management, commission \& payroll processing, lead tracking, and internal ticketing}\vspace{-\baselineskip}
+      \resumeItem{Built a system to track lead stages (visited, sold, interested, etc.) with color-coded pins using Google Maps API}
+      \resumeItem{Used this system to improve agent efficiency – reducing duplicate visits and preventing client frustration}
+      \resumeItem{Spearheaded critical design decisions to enhance system architecture and improve overall efficiency, collaborating closely with stakeholders to meet dynamic business needs}
+      \resumeItem{Oversaw the development of \textbf{Atom}, an in-house project management SaaS product}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Jin Technologies}{Islamabad, PAK (Hybrid)}
+      {Software Engineer}{Nov 2022 -- Sep 2024}
+      \resumeItemListStart
+        \resumeItem{Revamped and developed an equestrian sport and event management system, SGL, originally a 4D desktop application, into a cloud-based version using React and NestJS frameworks}
+        \resumeItem{Engaged in all phases of the Software Development Life Cycle (SDLC), including requirement analysis, design, development, implementation, and testing}
+        \resumeItem{Built the authorization system from the ground up using Permit SDK and Nest RBAC policy}
+        \resumeItem{Increased system throughput by processing complex tasks in the background using Redis and Bull queues, distributing system load and enhancing overall efficiency}
+        \resumeItem{Developed RESTful NestJS APIs powering authorization, payment integration, and background job workflows across the SGL platform}
+        \resumeItem{Designed database schemas with complex entity relationships}
+        \resumeItem{Implemented financial accounting module and integrated different payment gateways using Spreedly}
+        \resumeItem{Applied equestrian sports domain expertise to translate event rules and end-to-end workflows into system requirements, improving accuracy of scoring, scheduling, and event management features}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Nustac}{Ajman, UAE (Remote)}
+      {Web Developer (Blockchain)}{Jul 2022 -- Oct 2022}
+      \resumeItemListStart
+        \resumeItem{Led development of blockchain-based web applications, including an all-in-one hiring platform with focus on professional networking and verifiable experiences through the use of Soul-bound tokens}
+        \resumeItem{Oversaw the design process of complete application, ranging from software design \& architecture to User Interface}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------CONTRACT ROLES-----------
+\section{Contract Roles}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {Virtual Clinic $|$ SAH Diagnostics}{Greater London, UK (Remote)}
+        {Software Engineer}{2026}
+        \resumeItemListStart
+          \resumeItem{Built a FHIR-compliant patient records and clinical-workflow platform for a UK NHS diagnostics provider serving 21 NHS Trusts}
+          \resumeItem{Developed EHR-style features with Medplum as the FHIR backend for healthcare interoperability across cancer diagnosis and mobile diagnostic units}
+          \resumeItem{\textbf{Technologies:} Medplum, FHIR, React, Node.js, PostgreSQL}
+        \resumeItemListEnd
+      \resumeSubheading
+        {SafegateAI $|$ Codedevza AI}{Islamabad, PAK (Remote)}
+        {Senior Software Engineer}{2025}
+        \resumeItemListStart
+          \resumeItem{Spearheaded MVP delivery of an enterprise AI-governance platform monitoring tool usage, privacy-compliance audits, and workflow analysis}
+          \resumeItem{Integrated LLM capabilities to analyze workflows and drive cost reductions and productivity gains for enterprise clients}
+          \resumeItem{\textbf{Technologies:} OpenAI API, LLMs, Node.js, React, PostgreSQL}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%
+%-------------------------------------------
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+     \small{\item{
+     \vspace{2pt}\textbf{Programming}{: JavaScript, TypeScript, Python, Golang, PHP, Solidity, Rust} \\
+     \vspace{2pt}\textbf{Web}{: React (ReactJS), Node.js (Node, NodeJS), NestJS, Next.js, Angular, GraphQL, Tailwind, Bootstrap} \\
+     \vspace{2pt}\textbf{Database}{: MySQL, PostgreSQL (Postgres), TypeORM, MongoDB, Redis} \\
+     \vspace{2pt}\textbf{Frameworks \& Others}{: Git, Spreedly, Stripe, Bull, AWS, Ganache, Truffle, Claude}
+    }}
+ \end{itemize}
+\end{document}

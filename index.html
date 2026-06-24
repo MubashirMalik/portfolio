@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mubashir Ahmed Malik — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="center-nav" aria-label="Main sections">
+    <button class="nav-link active" data-section="intro">Intro</button>
+    <button class="nav-link" data-section="experience">Experience</button>
+    <button class="nav-link" data-section="education">Education</button>
+    <button class="nav-link" data-section="projects">Projects</button>
+  </nav>
+
+  <main id="main" tabindex="0" aria-label="Portfolio content">
+    <!-- INTRO -->
+    <section class="viewport-section active" id="intro" data-section="intro">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="eyebrow">Senior Software Engineer</p>
+          <h1 class="name">Mubashir Ahmed Malik</h1>
+          <p class="tagline">
+            I build scalable web &amp; mobile products — from community solar platforms
+            serving 1,000+ field agents to cloud-native equestrian event systems.
+          </p>
+          <p class="tagline">
+            I take full ownership of what I build and pick up new stacks quickly. I work exclusively remote — it's where I focus best and slot right into a team.
+          </p>
+          <div class="contact-list">
+            <ul class="contact-row">
+              <li class="contact-item contact-static">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>G-11, Islamabad, PAK</span>
+              </li>
+              <li>
+                <a href="#" class="contact-item phone-link" data-cc="92" data-num="3175384929">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span class="phone-text">Phone</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="contact-item email-link" data-user="imubasherahmad" data-domain="gmail.com">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="email-text">Email</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="contact-row">
+              <li>
+                <a href="https://linkedin.com/in/mubashir0" class="contact-item" target="_blank" rel="noopener noreferrer">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mubashirmalik" class="contact-item" target="_blank" rel="noopener noreferrer">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills-panel">
+          <h2>Technical Skills</h2>
+          <dl class="skills-list">
+            <div><dt>Programming</dt><dd>JavaScript, TypeScript, Python, Golang, PHP, Solidity, Rust</dd></div>
+            <div><dt>Web</dt><dd>React, Node.js, NestJS, Next.js, Angular, GraphQL, Tailwind</dd></div>
+            <div><dt>Database</dt><dd>MySQL, PostgreSQL, TypeORM, MongoDB, Redis</dd></div>
+            <div><dt>Tools</dt><dd>Git, AWS, Stripe, Spreedly, Bull, OpenAI API</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="viewport-section section--text-only" id="experience" data-section="experience">
+      <header class="section-header">
+        <h2>Experience</h2>
+        <div class="slide-controls" data-carousel="experience">
+          <button class="slide-btn prev" aria-label="Previous role">←</button>
+          <span class="slide-counter"><span class="current">1</span> / <span class="total">5</span></span>
+          <button class="slide-btn next" aria-label="Next role">→</button>
+        </div>
+      </header>
+      <div class="carousel-track" data-carousel="experience">
+        <article class="carousel-slide">
+          <div class="role-card">
+            <div class="role-meta">
+              <h3>Automation GOAT Corporation</h3>
+              <p class="role-title">Lead Contributor &amp; Mentor</p>
+              <p class="role-period">Aug 2025 — Present · Oregon, USA (Remote)</p>
+            </div>
+            <ul class="role-bullets">
+              <li>Primary client-facing engineer — requirement gathering, workflow analysis, and issue resolution</li>
+              <li>Orchestrated end-to-end delivery of 10+ web and mobile applications from roadmap to production</li>
+              <li>Led technical direction for a team of 6 engineers, improving code quality and delivery timelines</li>
+            </ul>
+            <div class="role-sub">
+              <p class="role-title">Senior Full Stack Developer · May 2025 — Present</p>
+              <ul class="role-bullets">
+                <li>Architected a high-volume community solar platform generating millions in revenue with 1,000+ field agents</li>
+                <li>Built interactive live-mapping to track lead pipelines and sales stages in real-time</li>
+                <li>Engineered hierarchical payout logic for commission payroll and insurance software</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide">
+          <div class="role-card">
+            <div class="role-meta">
+              <h3>Nelly IS Marketing</h3>
+              <p class="role-title">Full Stack Developer</p>
+              <p class="role-period">Sep 2024 — Apr 2025 · Atlanta, USA (Remote)</p>
+            </div>
+            <ul class="role-bullets">
+              <li>Led a 4-person cross-functional team through 8+ projects across various domains</li>
+              <li>Directed critical backend design — database schemas, API structures, and technology stacks</li>
+              <li>Developed <strong>Royalty Renewables</strong>, a large-scale community solar brokerage management system</li>
+              <li>Built Google Maps lead-tracking with color-coded pins — reducing duplicate visits and improving agent efficiency</li>
+              <li>Oversaw development of <strong>Atom</strong>, an in-house project management SaaS product</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="carousel-slide">
+          <div class="role-card">
+            <div class="role-meta">
+              <h3>Jin Technologies</h3>
+              <p class="role-title">Software Engineer</p>
+              <p class="role-period">Nov 2022 — Sep 2024 · Islamabad, PAK (Hybrid)</p>
+            </div>
+            <ul class="role-bullets">
+              <li>Revamped SGL equestrian sport &amp; event management system from 4D desktop to cloud (React + NestJS)</li>
+              <li>Built authorization from scratch using Permit SDK and Nest RBAC policy</li>
+              <li>Increased throughput with Redis and Bull background job queues</li>
+              <li>Developed RESTful APIs for authorization, payments, and background workflows</li>
+              <li>Implemented financial accounting module and Spreedly payment gateway integrations</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="carousel-slide">
+          <div class="role-card">
+            <div class="role-meta">
+              <h3>Nustac</h3>
+              <p class="role-title">Web Developer (Blockchain)</p>
+              <p class="role-period">Jul 2022 — Oct 2022 · Ajman, UAE (Remote)</p>
+            </div>
+            <ul class="role-bullets">
+              <li>Led blockchain-based web apps including an all-in-one hiring platform with Soul-bound tokens</li>
+              <li>Oversaw full design process — software architecture through user interface</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="carousel-slide">
+          <div class="role-card contract">
+            <div class="role-meta">
+              <h3>Contract Roles</h3>
+              <p class="role-title">Software Engineer · Senior Software Engineer</p>
+              <p class="role-period">2025 — 2026 · Remote</p>
+            </div>
+            <ul class="role-bullets">
+              <li><strong>Virtual Clinic / SAH Diagnostics</strong> — FHIR-compliant patient records platform for 21 NHS Trusts (Medplum, React, Node.js)</li>
+              <li><strong>SafegateAI / Codedevza AI</strong> — Enterprise AI-governance MVP with LLM workflow analysis (OpenAI API, PostgreSQL)</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="slide-dots" data-carousel="experience" aria-hidden="true"></div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="viewport-section" id="education" data-section="education">
+      <header class="section-header">
+        <h2>Education</h2>
+      </header>
+      <div class="carousel-track">
+        <article class="carousel-slide project-slide active">
+          <div class="project-layout">
+            <div class="split-content">
+              <div class="role-meta">
+                <h3>National University of Computer &amp; Emerging Sciences (FAST)</h3>
+                <p class="role-title">Bachelor of Science in Computer Science</p>
+                <p class="role-period">Islamabad, Pakistan · Aug 2018 — Jun 2022</p>
+              </div>
+              <ul class="role-bullets">
+                <li><strong>Dean's List of Honors</strong> — 2021</li>
+                <li>Ethical Hacking Concepts &amp; Practices</li>
+                <li>Fundamentals of Malware Analysis</li>
+                <li>Cryptography &amp; Data Security</li>
+                <li>Blockchain &amp; Cryptocurrencies</li>
+                <li>Data Mining</li>
+                <li>Web Programming</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img src="images/education.webp" alt="Mubashir Ahmed Malik holding FAST NU degree certificate" loading="lazy" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="viewport-section" id="projects" data-section="projects">
+      <header class="section-header">
+        <h2>Projects</h2>
+        <div class="slide-controls" data-carousel="projects">
+          <button class="slide-btn prev" aria-label="Previous project">←</button>
+          <span class="slide-counter"><span class="current">1</span> / <span class="total">6</span></span>
+          <button class="slide-btn next" aria-label="Next project">→</button>
+        </div>
+      </header>
+      <div class="carousel-track" data-carousel="projects">
+        <article class="carousel-slide project-slide">
+          <div class="project-layout">
+            <div class="split-content">
+              <div class="role-meta">
+                <h3>Community Solar Platform</h3>
+                <p class="role-title">Royalty Renewables · Automation GOAT</p>
+                <p class="role-period">Community Solar Brokerage · Full Stack Platform</p>
+              </div>
+              <ul class="role-bullets">
+                <li>High-volume brokerage platform generating millions in revenue</li>
+                <li>Supports 1,000+ active field agents across sales pipelines</li>
+                <li>Real-time live-mapping for lead stages and sales tracking</li>
+                <li>Complex commission payroll with hierarchical multi-party revenue splits</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Solar panels in a field" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide project-slide">
+          <div class="project-layout">
+            <div class="split-content">
+              <div class="role-meta">
+                <h3>SGL Equestrian Sports</h3>
+                <p class="role-title">Jin Technologies</p>
+                <p class="role-period">Equestrian Event Management · React, NestJS</p>
+              </div>
+              <ul class="role-bullets">
+                <li>Cloud migration of a 4D desktop equestrian event management system</li>
+                <li>React + NestJS stack with full SDLC ownership</li>
+                <li>Scoring, scheduling, and event management for horse jumping &amp; sport events</li>
+                <li>Payment gateways, financial accounting, and background job processing</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80" alt="Horse and rider jumping over an obstacle" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide project-slide">
+          <div class="project-layout">
+            <div class="split-content">
+              <div class="role-meta">
+                <h3>Atom</h3>
+                <p class="role-title">Nelly IS Marketing · In-house SaaS</p>
+                <p class="role-period">Project Management Platform</p>
+              </div>
+              <ul class="role-bullets">
+                <li>Project management SaaS built for internal team workflows</li>
+                <li>Led architecture and critical design decisions with stakeholders</li>
+                <li>Full-stack development across backend APIs and frontend UI</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Project planning on a desk" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide project-slide">
+          <div class="project-layout">
+            <div class="split-content">
+              <div class="role-meta">
+                <h3>Virtual Clinic</h3>
+                <p class="role-title">SAH Diagnostics · NHS UK</p>
+                <p class="role-period">Healthcare · Medplum, FHIR, React, Node.js</p>
+              </div>
+              <ul class="role-bullets">
+                <li>FHIR-compliant patient records and clinical workflow platform</li>
+                <li>Serves 21 NHS Trusts for cancer diagnosis and mobile diagnostic units</li>
+                <li>Medplum backend for healthcare interoperability</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Healthcare technology and medical records" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide project-slide">
+          <div class="project-layout">
+            <div class="split-content">
+              <div class="role-meta">
+                <h3>SafegateAI</h3>
+                <p class="role-title">Codedevza AI · Enterprise AI Governance</p>
+                <p class="role-period">OpenAI API, Node.js, React, PostgreSQL</p>
+              </div>
+              <ul class="role-bullets">
+                <li>MVP for monitoring AI tool usage and privacy-compliance audits</li>
+                <li>LLM-powered workflow analysis for cost reduction and productivity</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="Artificial intelligence neural network visualization" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide project-slide">
+          <div class="project-layout">
+            <div class="split-content">
+              <div class="role-meta">
+                <h3>Blockchain Hiring Platform</h3>
+                <p class="role-title">Nustac</p>
+                <p class="role-period">Blockchain · Soul-bound Tokens</p>
+              </div>
+              <ul class="role-bullets">
+                <li>All-in-one hiring platform with professional networking features</li>
+                <li>Verifiable experiences through Soul-bound tokens on blockchain</li>
+                <li>End-to-end design from architecture to user interface</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1639762681485-074b7f938e0e?w=800&q=80" alt="Blockchain technology abstract visualization" loading="lazy" />
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="slide-dots" data-carousel="projects" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
