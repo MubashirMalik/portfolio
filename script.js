@@ -44,6 +44,7 @@
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
+      if (!link.dataset.section) return;
       showSection(link.dataset.section);
       link.blur();
     });
