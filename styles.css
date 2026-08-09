@@ -295,6 +295,22 @@ body::before {
   margin-bottom: 1.5rem;
 }
 
+.toptal-badge {
+  margin-top: 1.25rem;
+  transform: scale(0.85);
+  transform-origin: left top;
+}
+
+.toptal-badge #r {
+  line-height: normal;
+}
+
+@media (max-width: 720px) {
+  .toptal-badge {
+    transform: scale(0.75);
+  }
+}
+
 .contact-list {
   display: flex;
   flex-direction: column;
