@@ -439,19 +439,12 @@ a.contact-item:hover .contact-icon {
 }
 
 /* ── Experience ── */
-.role-card,
 .project-layout {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 0.85rem;
   padding: clamp(1.1rem, 2.5vw, 1.75rem);
   box-shadow: 0 10px 30px rgba(28, 31, 36, 0.05);
-}
-
-.role-card {
-  max-width: 720px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .role-meta h3 {
