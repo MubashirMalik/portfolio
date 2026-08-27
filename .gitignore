@@ -1,2 +1,4 @@
 resume.log
 .DS_Store
+.cursor/
+private/
