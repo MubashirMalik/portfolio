@@ -16,26 +16,8 @@
   --index-w: 6.5rem;
 }
 
-/* Default: Shore (Better Daad) */
+/* Default Dark = Settlement (ink / copper) */
 :root,
-[data-theme="shore"] {
-  --ink: #eef5f4;
-  --ink-2: #e0ecea;
-  --bone: #12262b;
-  --bone-dim: #5a7278;
-  --copper: #1a7a86;
-  --copper-dim: #0e525b;
-  --line: rgba(18, 38, 43, 0.12);
-  --line-strong: rgba(18, 38, 43, 0.22);
-  --on-accent: #eef5f4;
-  --nav-bg: rgba(238, 245, 244, 0.92);
-  --atmosphere-1: rgba(207, 232, 230, 0.95);
-  --atmosphere-2: rgba(186, 214, 220, 0.45);
-  --atmosphere-base: #eef5f4;
-  --ledger-opacity: 0.35;
-}
-
-/* Preserved: Settlement (original ink / copper) */
 [data-theme="settlement"] {
   --ink: #0a0b0d;
   --ink-2: #12141a;
@@ -51,6 +33,24 @@
   --atmosphere-2: rgba(196, 122, 74, 0.06);
   --atmosphere-base: linear-gradient(180deg, #0a0b0d 0%, #12141a 45%, #0a0b0d 100%);
   --ledger-opacity: 0.45;
+}
+
+/* Light = Shore (Better Daad) */
+[data-theme="shore"] {
+  --ink: #eef5f4;
+  --ink-2: #e0ecea;
+  --bone: #12262b;
+  --bone-dim: #5a7278;
+  --copper: #1a7a86;
+  --copper-dim: #0e525b;
+  --line: rgba(18, 38, 43, 0.12);
+  --line-strong: rgba(18, 38, 43, 0.22);
+  --on-accent: #eef5f4;
+  --nav-bg: rgba(238, 245, 244, 0.92);
+  --atmosphere-1: rgba(207, 232, 230, 0.95);
+  --atmosphere-2: rgba(186, 214, 220, 0.45);
+  --atmosphere-base: #eef5f4;
+  --ledger-opacity: 0.35;
 }
 
 html {
@@ -154,6 +154,9 @@ main {
   top: 1.25rem;
   right: clamp(0.75rem, 2vw, 1.5rem);
   z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--mono);
   font-size: 0.65rem;
   font-weight: 500;
@@ -162,7 +165,7 @@ main {
   color: var(--bone-dim);
   background: transparent;
   border: 1px solid var(--line-strong);
-  padding: 0.55rem 0.85rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
@@ -172,8 +175,44 @@ main {
   border-color: var(--copper);
 }
 
-.theme-toggle .theme-name {
-  color: var(--copper);
+.theme-toggle-track {
+  position: relative;
+  width: 1.85rem;
+  height: 1rem;
+  border-radius: 999px;
+  background: var(--line-strong);
+  border: 1px solid var(--line-strong);
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--bone-dim);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle-track {
+  background: rgba(196, 122, 74, 0.35);
+  border-color: var(--copper);
+}
+
+[data-theme="shore"] .theme-toggle[aria-checked="true"] .theme-toggle-track {
+  background: rgba(26, 122, 134, 0.28);
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle-thumb {
+  transform: translateX(0.75rem);
+  background: var(--copper);
+}
+
+.theme-toggle-text {
+  color: inherit;
 }
 
 /* Sticky left index */

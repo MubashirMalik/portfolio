@@ -2,36 +2,34 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  const THEME_KEY = "portfolio-theme";
-  const themes = ["shore", "settlement"];
-  const labels = { shore: "Shore", settlement: "Settlement" };
+  const THEME_KEY = "portfolio-theme-v2";
+  const themes = ["settlement", "shore"];
   const root = document.documentElement;
   const toggle = document.querySelector("[data-theme-toggle]");
-  const labelEl = document.querySelector("[data-theme-label]");
 
   function currentTheme() {
     const t = root.getAttribute("data-theme");
-    return themes.includes(t) ? t : "shore";
+    return themes.includes(t) ? t : "settlement";
   }
 
   function applyTheme(name) {
-    const theme = themes.includes(name) ? name : "shore";
+    const theme = name === "shore" ? "shore" : "settlement";
+    const isDark = theme === "settlement";
     root.setAttribute("data-theme", theme);
     try {
       localStorage.setItem(THEME_KEY, theme);
     } catch (e) {
       /* ignore */
     }
-    if (labelEl) labelEl.textContent = labels[theme];
     if (toggle) {
-      toggle.setAttribute("aria-label", `Color theme: ${labels[theme]}. Click to switch.`);
+      toggle.setAttribute("aria-checked", isDark ? "true" : "false");
     }
   }
 
   applyTheme(currentTheme());
 
   toggle?.addEventListener("click", () => {
-    const next = currentTheme() === "shore" ? "settlement" : "shore";
+    const next = currentTheme() === "settlement" ? "shore" : "settlement";
     applyTheme(next);
   });
 

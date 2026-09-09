@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="settlement">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,13 +12,13 @@
   <script>
     (function () {
       try {
-        var t = localStorage.getItem("portfolio-theme");
+        var t = localStorage.getItem("portfolio-theme-v2");
         document.documentElement.setAttribute(
           "data-theme",
-          t === "settlement" || t === "shore" ? t : "shore"
+          t === "shore" ? "shore" : "settlement"
         );
       } catch (e) {
-        document.documentElement.setAttribute("data-theme", "shore");
+        document.documentElement.setAttribute("data-theme", "settlement");
       }
     })();
   </script>
@@ -26,8 +26,18 @@
 <body>
   <div class="atmosphere" aria-hidden="true"></div>
 
-  <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color theme">
-    Theme <span class="theme-name" data-theme-label>Shore</span>
+  <button
+    type="button"
+    class="theme-toggle"
+    data-theme-toggle
+    role="switch"
+    aria-checked="true"
+    aria-label="Dark mode"
+  >
+    <span class="theme-toggle-track" aria-hidden="true">
+      <span class="theme-toggle-thumb"></span>
+    </span>
+    <span class="theme-toggle-text">Dark mode</span>
   </button>
 
   <nav class="site-index" aria-label="Sections">
@@ -70,12 +80,12 @@
         </div>
         <dl class="metrics">
           <div class="metric">
-            <dt>1,000+</dt>
+            <dt>5,000+</dt>
             <dd>Field agents on Royalty</dd>
           </div>
           <div class="metric">
-            <dt>Millions</dt>
-            <dd>Revenue on the solar platform</dd>
+            <dt>$Millions</dt>
+            <dd>Revenue across solar and insurance</dd>
           </div>
           <div class="metric">
             <dt>10+</dt>
@@ -131,7 +141,7 @@
         <li class="build reveal">
           <div class="build-main">
             <h3>Community Solar Platform</h3>
-            <p>Royalty Renewables · brokerage, maps, commissions, billing for 1,000+ agents</p>
+            <p>Royalty Renewables · brokerage, maps, commissions, billing for 5,000+ agents</p>
           </div>
           <span class="build-meta">Automation GOAT</span>
         </li>
