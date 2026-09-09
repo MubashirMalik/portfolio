@@ -7,6 +7,36 @@
 }
 
 :root {
+  --display: "Syne", system-ui, sans-serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --pad-x: clamp(1.25rem, 4vw, 4rem);
+  --pad-y: clamp(4rem, 12vh, 7.5rem);
+  --content: min(68rem, 100%);
+  --index-w: 6.5rem;
+}
+
+/* Default: Shore (Better Daad) */
+:root,
+[data-theme="shore"] {
+  --ink: #eef5f4;
+  --ink-2: #e0ecea;
+  --bone: #12262b;
+  --bone-dim: #5a7278;
+  --copper: #1a7a86;
+  --copper-dim: #0e525b;
+  --line: rgba(18, 38, 43, 0.12);
+  --line-strong: rgba(18, 38, 43, 0.22);
+  --on-accent: #eef5f4;
+  --nav-bg: rgba(238, 245, 244, 0.92);
+  --atmosphere-1: rgba(207, 232, 230, 0.95);
+  --atmosphere-2: rgba(186, 214, 220, 0.45);
+  --atmosphere-base: #eef5f4;
+  --ledger-opacity: 0.35;
+}
+
+/* Preserved: Settlement (original ink / copper) */
+[data-theme="settlement"] {
   --ink: #0a0b0d;
   --ink-2: #12141a;
   --bone: #ebe6dc;
@@ -15,13 +45,12 @@
   --copper-dim: #8f5635;
   --line: rgba(235, 230, 220, 0.12);
   --line-strong: rgba(235, 230, 220, 0.22);
-  --display: "Syne", system-ui, sans-serif;
-  --sans: "DM Sans", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
-  --pad-x: clamp(1.25rem, 4vw, 4rem);
-  --pad-y: clamp(4rem, 12vh, 7.5rem);
-  --content: min(68rem, 100%);
-  --index-w: 6.5rem;
+  --on-accent: #0a0b0d;
+  --nav-bg: rgba(10, 11, 13, 0.88);
+  --atmosphere-1: rgba(196, 122, 74, 0.14);
+  --atmosphere-2: rgba(196, 122, 74, 0.06);
+  --atmosphere-base: linear-gradient(180deg, #0a0b0d 0%, #12141a 45%, #0a0b0d 100%);
+  --ledger-opacity: 0.45;
 }
 
 html {
@@ -71,15 +100,22 @@ a:hover {
   outline-offset: 3px;
 }
 
-/* Atmosphere: ledger lines + soft copper wash + grain */
+/* Atmosphere: ledger lines + theme wash + grain */
 .atmosphere {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(ellipse 80% 55% at 85% -10%, rgba(196, 122, 74, 0.14), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 0% 60%, rgba(196, 122, 74, 0.06), transparent 50%),
+    radial-gradient(ellipse 80% 55% at 10% -10%, var(--atmosphere-1), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 100% 0%, var(--atmosphere-2), transparent 55%),
+    var(--atmosphere-base, var(--ink));
+}
+
+[data-theme="settlement"] .atmosphere {
+  background:
+    radial-gradient(ellipse 80% 55% at 85% -10%, var(--atmosphere-1), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 0% 60%, var(--atmosphere-2), transparent 50%),
     linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 45%, var(--ink) 100%);
 }
 
@@ -94,7 +130,7 @@ a:hover {
     var(--line) 47px,
     var(--line) 48px
   );
-  opacity: 0.45;
+  opacity: var(--ledger-opacity);
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 90%);
 }
 
@@ -107,9 +143,37 @@ a:hover {
 }
 
 .site-index,
+.theme-toggle,
 main {
   position: relative;
   z-index: 1;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1.25rem;
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  z-index: 60;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--bone);
+  border-color: var(--copper);
+}
+
+.theme-toggle .theme-name {
+  color: var(--copper);
 }
 
 /* Sticky left index */
@@ -226,7 +290,7 @@ main {
 .btn-primary {
   background: var(--copper);
   border-color: var(--copper);
-  color: var(--ink);
+  color: var(--on-accent);
 }
 
 .btn-primary:hover {
@@ -586,6 +650,14 @@ main {
     --index-w: 0;
   }
 
+  .theme-toggle {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+  }
+
   .site-index {
     top: 0;
     left: 0;
@@ -595,7 +667,7 @@ main {
     flex-direction: row;
     gap: 0;
     padding: 0.65rem var(--pad-x);
-    background: rgba(10, 11, 13, 0.88);
+    background: var(--nav-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
     overflow-x: auto;

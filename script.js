@@ -2,6 +2,39 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  const THEME_KEY = "portfolio-theme";
+  const themes = ["shore", "settlement"];
+  const labels = { shore: "Shore", settlement: "Settlement" };
+  const root = document.documentElement;
+  const toggle = document.querySelector("[data-theme-toggle]");
+  const labelEl = document.querySelector("[data-theme-label]");
+
+  function currentTheme() {
+    const t = root.getAttribute("data-theme");
+    return themes.includes(t) ? t : "shore";
+  }
+
+  function applyTheme(name) {
+    const theme = themes.includes(name) ? name : "shore";
+    root.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch (e) {
+      /* ignore */
+    }
+    if (labelEl) labelEl.textContent = labels[theme];
+    if (toggle) {
+      toggle.setAttribute("aria-label", `Color theme: ${labels[theme]}. Click to switch.`);
+    }
+  }
+
+  applyTheme(currentTheme());
+
+  toggle?.addEventListener("click", () => {
+    const next = currentTheme() === "shore" ? "settlement" : "shore";
+    applyTheme(next);
+  });
+
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const sectionIds = ["active", "owned", "built", "path", "talk"];
   const indexLinks = [...document.querySelectorAll(".index-link")];
