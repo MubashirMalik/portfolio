@@ -2,7 +2,6 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  const THEME_KEY = "portfolio-theme-v2";
   const themes = ["settlement", "shore"];
   const root = document.documentElement;
   const toggle = document.querySelector("[data-theme-toggle]");
@@ -16,11 +15,6 @@
     const theme = name === "shore" ? "shore" : "settlement";
     const isDark = theme === "settlement";
     root.setAttribute("data-theme", theme);
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch (e) {
-      /* ignore */
-    }
     if (toggle) {
       toggle.setAttribute("aria-checked", isDark ? "true" : "false");
     }
