@@ -83,6 +83,7 @@ body {
   color: var(--bone);
   line-height: 1.55;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -644,10 +645,19 @@ main {
   text-decoration: none;
   border-bottom: 1px solid var(--line-strong);
   width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .contact-list a:hover {
   border-bottom-color: var(--copper);
+}
+
+.build p,
+.lane p,
+.body-copy,
+.timeline-role {
+  overflow-wrap: break-word;
 }
 
 .toptal-badge {
@@ -683,6 +693,13 @@ main {
   transition-delay: 0.5s;
 }
 
+/* Tablet: stack dense grids before the left index collapses */
+@media (max-width: 1100px) {
+  .active-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Mobile */
 @media (max-width: 900px) {
   :root {
@@ -691,8 +708,8 @@ main {
 
   .theme-toggle {
     top: auto;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    right: calc(1rem + env(safe-area-inset-right, 0px));
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
   }
@@ -705,7 +722,7 @@ main {
     width: auto;
     flex-direction: row;
     gap: 0;
-    padding: 0.65rem var(--pad-x);
+    padding: calc(0.65rem + env(safe-area-inset-top, 0px)) var(--pad-x) 0.65rem;
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
@@ -733,7 +750,8 @@ main {
 
   main {
     padding-left: 0;
-    padding-top: 2.75rem;
+    padding-top: calc(2.75rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
   }
 
   .active-grid,
@@ -746,12 +764,20 @@ main {
     gap: 0.35rem;
   }
 
+  .build-meta {
+    white-space: normal;
+  }
+
   .toptal-badge {
     justify-self: start;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .hero {
-    padding-top: calc(var(--pad-y) + 1rem);
+    min-height: calc(100dvh - 2.75rem - env(safe-area-inset-top, 0px));
+    padding-top: clamp(2rem, 6vh, 3.5rem);
+    padding-bottom: 2rem;
   }
 }
 
@@ -773,5 +799,19 @@ main {
 
   .btn {
     text-align: center;
+  }
+
+  .hero-name {
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
+  }
+
+  .band {
+    padding-left: max(var(--pad-x), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--pad-x), env(safe-area-inset-right, 0px));
+  }
+
+  .hero {
+    padding-left: max(var(--pad-x), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--pad-x), env(safe-area-inset-right, 0px));
   }
 }
